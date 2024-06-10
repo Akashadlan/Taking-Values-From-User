@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">Project 1</string>
+    <string name="LOGIN">Login</string>
+    <string name="Email_id">Email id</string>
+    <string name="ok">ok</string>
+    <string name="name">name</string>
+    <string name="collage">collage</string>
+    <string name="contect">contect</string>
+    <string name="Name">Name</string>
+    <string name="enter_your_name">enter your name</string>
+    <string name="heading">HEADING</string>
+    <string name="enter_yopur_emaul_id">enter yopur emaul id</string>
+    <string name="enter_your_email_id">"enter yoiur emsil id "</string>
+    <string name="play">PLAY</string>
+    <string name="enter_your_rmail_id">enter your rmail id</string>
+    <string name="Gender">gender</string>
+    <string name="gender">Gender</string>
+    <string name="Male">Male</string>
+    <string name="Other">Other</string>
+    <string name="contectnumber">enter your contect no.</string>
+    <string name="collagename">enter your collage name</string>
+    <string name="no">No</string>
+    <string name="Yes">Yes</string>
+    <string name="your_study">your study</string>
+    <string name="stuent">are you student</string>
+    <string name="thnks">THANKS</string>
+    <string name="Re_enter">Re-enter</string>
+</resources>

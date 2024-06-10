@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:background="#0091EA"
+        android:gravity="center"
+        android:text="@string/LOGIN"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sp_30"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:background="@color/white"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:text="@string/Name"
+            android:background="#5297DC"
+            android:textColor="@color/black"
+            android:padding="10dp"
+            android:textSize="15sp"/>
+
+        <EditText
+            android:id="@+id/etName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/enter_your_name"
+            android:inputType="text"
+            android:textColorHint="#8A8787"
+            android:padding="16sp"
+            android:textColor="@color/black"
+            android:textSize="13sp"
+            android:textStyle="italic" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:background="@color/white"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:text="@string/Email_id"
+            android:textColor="@color/black"
+            android:background="#5297DC"
+            android:padding="10dp"
+            android:textSize="15sp"/>
+
+        <EditText
+            android:id="@+id/etemail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/enter_your_rmail_id"
+            android:inputType="textEmailAddress"
+            android:textColorHint="#8A8787"
+            android:padding="16dp"
+            android:textColor="@color/black"
+            android:textSize="13sp"
+            android:textStyle="italic" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:background="@color/white"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:text="@string/contect"
+            android:textColor="@color/black"
+            android:background="#5297DC"
+            android:textSize="15sp"
+            android:padding="10dp"/>
+
+        <EditText
+            android:id="@+id/etcontect"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/contectnumber"
+            android:inputType="number"
+            android:textColor="@color/black"
+            android:textColorHint="#8A8787"
+            android:maxLength="10"
+            android:padding="16dp"
+            android:textSize="13sp"
+            android:textStyle="italic" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:background="@color/white"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10sp"
+            android:text="@string/collage"
+            android:textColor="@color/black"
+            android:background="#5297DC"
+            android:textSize="15sp"
+            android:padding="10dp"/>
+
+        <EditText
+            android:id="@+id/etcollage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/collagename"
+            android:inputType="text"
+            android:padding="16dp"
+            android:textColorHint="#8A8787"
+            android:textColor="@color/black"
+            android:textSize="13sp"
+            android:textStyle="italic" />
+    </LinearLayout>
+
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10sp"
+            android:text="@string/stuent"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:text="@string/Yes"
+            android:textColor="@color/black"
+            android:textSize="15sp"/>
+
+        <RadioButton
+            android:id="@+id/rb1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:text="@string/no"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            />
+
+        <RadioButton
+            android:id="@+id/rb2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_gravity="center_horizontal"
+            />
+    </RadioGroup>
+    <EditText
+        android:id="@+id/etstudy"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="text"
+        android:hint="@string/your_study"
+        android:textColor="@color/black"
+        android:textColorHint="#8A8787"
+        android:textSize="20sp"
+        android:textStyle="italic"
+        android:visibility="gone"
+        />
+
+    <Button
+        android:id="@+id/btnplay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="@string/play"
+        android:textSize="15sp" />
+</LinearLayout>
