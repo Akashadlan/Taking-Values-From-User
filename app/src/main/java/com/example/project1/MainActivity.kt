@@ -65,7 +65,8 @@ class MainActivity : AppCompatActivity() {
 
             } else if (etstudy.text.toString().trim().isNullOrEmpty()) {
                 etstudy.error = "enter your study"
-            }else if (rb1.isChecked && etstudy?.text?.toString()?.trim().isNullOrEmpty())
+            }
+            else if (rb1.isChecked && etstudy?.text?.toString()?.trim().isNullOrEmpty())
                 rb1.error = resources.getString(R.string.enter_your_study)
 
            else {
