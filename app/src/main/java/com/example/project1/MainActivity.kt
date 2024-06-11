@@ -21,6 +21,10 @@ class MainActivity : AppCompatActivity() {
     lateinit var etcollage : EditText
     lateinit var rb1 : RadioButton
     lateinit var rb2 : RadioButton
+    var previousName = ""
+    var previousNumber = ""
+
+
     lateinit var etstudy : EditText
     lateinit var btnplay : Button
     @SuppressLint("MissingInflatedId")
@@ -45,26 +49,41 @@ class MainActivity : AppCompatActivity() {
         btnplay?.setOnClickListener {
             Toast.makeText(this, "Success Your Id", Toast.LENGTH_SHORT).show()
 
-          if(etname.text.toString().trim().isNullOrEmpty()){
+            if (etname.text.toString().trim().isNullOrEmpty()) {
                 etname.error = "enter your name"
 
-            }else if(etemail.text.toString().trim().isNullOrEmpty()){
+            } else if (etemail.text.toString().trim().isNullOrEmpty()) {
                 etemail.error = "enter your name"
 
-            }else if(etcollage.text.toString().trim().isNullOrEmpty()){
-            etcollage.error = "enter your name"
-            }else if (etcontect.text.toString().isNullOrEmpty()){
+            } else if (etcollage.text.toString().trim().isNullOrEmpty()) {
+                etcollage.error = "enter your name"
+            } else if (etcontect.text.toString().isNullOrEmpty()) {
                 etcontect.error = "enter your number"
 
-            }else if (etcontect.text.toString().toString().length<10){
+            } else if (etcontect.text.toString().toString().length < 10) {
                 etcontect.error = "number is not valid"
 
-            }else if(etstudy.text.toString().trim().isNullOrEmpty()){
+            } else if (etstudy.text.toString().trim().isNullOrEmpty()) {
                 etstudy.error = "enter your study"
+            }else if (rb1.isChecked && etstudy?.text?.toString()?.trim().isNullOrEmpty())
+                rb1.error = resources.getString(R.string.enter_your_study)
+
+           else {
+                var intent = Intent(this, Nextr_page::class.java)
+                intent.putExtra("name",etname?.text.toString().trim())
+                startActivity(intent)
+
             }
-            var intent = Intent(this, Nextr_page::class.java)
-            startActivity(intent)
+
         }
+
+        intent?.extras?.let {
+            previousName = it.getString("name")?:""
+            previousNumber = it.getString("number")?:""
+            System.out.println("previous key $ previousNumber")
+        }
+        etname?.setText(previousName)
+
         rb1?.setOnCheckedChangeListener { buttonView, isChecked ->
             if (isChecked){
                 etstudy?.visibility = View.VISIBLE
